@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/numOne"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter number One:"
+        android:textSize="20sp"
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numTwo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:hint="Enter number Two:"
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toBottomOf="@+id/numOne" />
+
+    <TextView
+        android:id="@+id/textOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:text="Result:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/textTwo"
+        app:layout_constraintTop_toBottomOf="@+id/numTwo" />
+
+    <TextView
+        android:id="@+id/textTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:layout_marginRight="40sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/textOne"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numTwo" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/round_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnSub"
+        app:layout_constraintTop_toBottomOf="@+id/textOne" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="-"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/btnAdd"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTwo" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="*"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnDivide"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="/"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/btnMultiply"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSub" />
+
+    <Button
+        android:id="@+id/btnModulus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="%"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/round_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnDelete"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiply" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="AC"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/round_button"
+        app:layout_constraintTop_toBottomOf="@+id/btnDivide"
+        app:layout_constraintLeft_toRightOf="@+id/btnModulus"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
